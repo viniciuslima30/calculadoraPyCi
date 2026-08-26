@@ -11,6 +11,3 @@ def testMultiplicacao():
     
 def testDivisao():
     assert divisao(10, 2) == 5
-
-def testSomaErro():
-    assert soma(10,10) == "erro"

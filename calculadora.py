@@ -1,3 +1,5 @@
+API_KEY="DASDASDKASMKDAMSNKDA"
+
 def soma(a, b):
     return a + b
 

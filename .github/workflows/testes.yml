@@ -25,7 +25,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Executar Linter
-        run: python -m flake8 seu_arquivo.py
+        run: python -m flake8 ./calculadora.py
          
       - name: Executar teste unitário
         run: python -m pytest

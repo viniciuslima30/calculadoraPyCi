@@ -37,6 +37,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       # 5. ANÁLISE COM SONARQUBE
       - name: Análise com SonarQube
-        uses: 'SonarSource/sonarqube-scan-action@53c3e3207aa4b4d4d5bc3e18911575317d66bc92'
+        uses: 'SonarSource/sonarqube-scan-action@9909623e1f0e4b85c18a994ef0b9bb78749a2a50'
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

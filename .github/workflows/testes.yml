@@ -13,7 +13,7 @@ jobs:
         os: [ubuntu-latest, windows-latest, macos-latest]
         python-version: ["3.11", "3.12"]
 
-    runs-on: ${{ matrix.os}}
+    runs-on: ${{ matrix.os }}
 
     steps:
       - name: Checkout do código
@@ -34,12 +34,8 @@ jobs:
       - name: Executar Linter
         run: python -m flake8 calculadora.py
 
-      # 2. TESTES UNITÁRIOS
-      - name: Executar testes
-        run: python -m pytest
-
-      # 3. COBERTURA
-      - name: Verificar cobertura
+      # 2 e 3. TESTES UNITÁRIOS E COBERTURA (Unificados para poupar tempo)
+      - name: Executar testes e verificar cobertura
         run: |
           python -m pytest --cov=calculadora --cov-report=term-missing --cov-fail-under=80
 
@@ -47,4 +43,4 @@ jobs:
       - name: Security Scan
         uses: gitleaks/gitleaks-action@v2
         env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

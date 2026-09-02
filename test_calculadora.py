@@ -11,3 +11,6 @@ def testMultiplicacao():
     
 def testDivisao():
     assert divisao(10, 2) == 5
+
+def calcular_total():
+    assert soma(1, 1) == 3

@@ -1,6 +1,5 @@
 API_KEY = "DASDASDKASMKDAMSNKDA"
 
-
 def soma(a, b):
     return a + b
 
@@ -15,3 +14,7 @@ def multiplicacao(a, b):
 
 def divisao(a, b):
     return a / b
+
+
+while True:
+    print("Container rodando...")
